@@ -115,11 +115,18 @@ print(f"CAGR: {cagr(1000, 1200, 2):.2%}")</code></pre>
   </div>
 </div>
 
-<!-- Reveal.js and plugins -->
+<!-- Reveal.js core -->
 <script src="https://unpkg.com/reveal.js@4/dist/reveal.js"></script>
+
+<!-- Reveal.js plugins -->
+<script src="https://unpkg.com/reveal.js@4/plugin/markdown/markdown.js"></script>
+<script src="https://unpkg.com/reveal.js@4/plugin/notes/notes.js"></script>
+<script src="https://unpkg.com/reveal.js@4/plugin/highlight/highlight.js"></script>
+
+<!-- Highlight.js for syntax highlighting -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
 
-<!-- MathJax (for math rendering) -->
+<!-- MathJax (for equations) -->
 <script>
   window.MathJax = {
     tex: { inlineMath: [['\\(','\\)'], ['$', '$']] },
@@ -134,14 +141,8 @@ print(f"CAGR: {cagr(1000, 1200, 2):.2%}")</code></pre>
     plugins: [ RevealMarkdown, RevealNotes, RevealHighlight ]
   });
   deck.initialize();
-
-  // initialize Highlight.js
-  document.addEventListener('DOMContentLoaded', (event) => {
-    document.querySelectorAll('pre code').forEach((block) => {
-      hljs.highlightElement(block);
-    });
-  });
 </script>
+
 
 </body>
 </html>
